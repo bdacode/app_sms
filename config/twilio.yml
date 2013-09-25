@@ -1,0 +1,7 @@
+development:
+  from: '+17542207822'
+  sid: 'AC9468590169831a96e230e87e4c539255'
+  token: '4117a3a2c73ed14ddfd2d3cced7454c2'
+
+path = File.join(Rails.root, "config/twilio.yml")
+TWILIO_CONFIG = YAML.load(File.read(path))[Rails.env] || {'sid' => 'AC9468590169831a96e230e87e4c539255', 'from' => '+17542207822', 'token' => '4117a3a2c73ed14ddfd2d3cced7454c2'}
